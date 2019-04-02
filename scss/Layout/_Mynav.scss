@@ -1,0 +1,63 @@
+.myNavbar {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    &.scrollClass {
+        background: $color-black-1;
+        .navbar-brand {
+            @include text($color-yellow, $fs-3, $fw-bold);
+        }
+    }
+    .navbar-brand {
+        font-family: 'Kaushan Script', cursive;
+        @include text($color-yellow, $fs-5, $fw-bold);
+
+        &:hover {
+            color: $color-yellow;
+        }
+    }
+    .navbar-toggler {
+        border-color: $color-yellow;
+    }
+    .collapse {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    @include text($color-white-0, $fs-2, $fw-bold-0);
+                    transition: all .5s;
+                    -webkit-transition: all .5s;
+                    -moz-transition: all .5s;
+                    -ms-transition: all .5s;
+                    -o-transition: all .5s;
+
+                    &:hover {
+                        color: $color-yellow;
+                    }
+                }
+                .active {
+                    color: $color-yellow;
+                }
+            }
+
+
+        }
+    }
+    @include Responsive(SM) {
+        .navbar-brand {
+            @include text($color-yellow, $fs-4, $fw-bold);
+        }
+
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        @include text($color-white-0, $fs-0, $fw-bold-0);
+                    }
+                }
+            }
+        }
+    }
+}

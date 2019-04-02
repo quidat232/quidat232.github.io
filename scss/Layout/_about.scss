@@ -1,0 +1,116 @@
+#about {
+    padding: 60px 0;
+    h1 {
+        @include text($color-black-0, $fs-4, $fw-bold);
+        letter-spacing: 3px;
+    }
+
+    p {
+        @include text($color-gray-0, $fs-1, $fw-normal);
+       padding: 20px 50px;
+    }
+
+    .about_items {
+        .about_item {
+            padding: 60px;
+            p:nth-child(2) {
+                @include text($color-gray-0, $fs-1, $fw-normal);
+                letter-spacing: 2px;
+                padding: 20px 0;
+            }
+            ul {
+                list-style: none;
+                li {
+                    width: 33%;
+                    float: left;
+                    font-size: $fs-1;
+                    margin-bottom: 20px;
+                    i {
+                        @include text($color-yellow,$fs-1,$fw-normal);
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .about_btn {
+                .btn_down {
+                    background: $color-yellow;
+                    padding: 10px 20px;
+                    margin-top: 30px;
+                    a {
+                        text-decoration: none;
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+        .about_img {
+            text-align: center;
+            img {
+                background-color: $color-white-0;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                width: 250px;
+                height: 250px;
+                border: 2px solid $color-yellow;
+                padding: 5px;
+            }
+        }
+        .about_us {
+            ul {
+                list-style: none;
+                li {
+                    border-bottom: 1px solid $color-gray-1;
+                    padding: 5px 0;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+@include Responsive(SM) {
+    #about {
+        p {
+            padding: 20px 0px 0px;
+        }
+        .about_items {
+            .about_item {
+                padding: 20px 0px;
+            }
+        }
+    }
+}
+@include Responsive(XS) {
+    #about {
+        h1 {
+            font-size: $fs-3;
+        }
+        p {
+            font-size: $fs-0;
+        }
+        .about_items {
+            .about_item {
+                padding: 20px;
+                h2 {
+                    font-size: $fs-3;
+                }
+                p:nth-child(2) {
+                    font-size: $fs-0;
+                }
+            }
+        }
+    }
+}
+.hr_content {
+    width: 20%;
+    margin: auto;
+    background: linear-gradient(to right,$color-yellow,$color-brow);
+    height: 3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

@@ -1,0 +1,222 @@
+#work {
+    background: #f2f2f2;
+    padding: 50px 0;
+
+    .clearfix {
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    h1 {
+        @include text($color-black-0, $fs-4, $fw-bold);
+        letter-spacing: 3px;
+    }
+
+    ul.work_resume {
+        position: relative;
+        list-style: none;
+        margin-top: 40px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, $color-yellow, $color-brow);
+            margin-left: -6.5px;
+        }
+
+        li:nth-child(odd) {
+            position: relative;
+
+            &::before {
+                content: '';
+                left: 49%;
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                position:  absolute;
+                background: linear-gradient(to bottom, $color-yellow, $color-brow);
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+
+            .work_items {
+                float: left;
+                position: relative;
+                width: 41%;
+                padding: 35px;
+                text-align: left;
+                border: none;
+                font-family: 'Roboto', sans-serif;
+                background: linear-gradient(to right, $color-yellow, $color-brow);
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    border: none;
+                    width: 20px;
+                    height: 20px;
+                    top: 4px;
+                    right: -10px;
+                    background: $color-brow;
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                }
+
+                .work_info {
+                    color: $color-white-0;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .time {
+                    color: $color-white-0;
+                    letter-spacing: 2px;
+                    line-height: 20px;
+                    padding-top: 5px;
+                }
+
+                .work_body {
+                    @include text($color-white-0, $fs-1, $fw-bold);
+                    letter-spacing: 2px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        li:nth-child(even) {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 49%;
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                background: linear-gradient(to bottom, $color-yellow, $color-brow);
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+
+            .work_items {
+                float: right;
+                position: relative;
+                width: 41%;
+                padding: 35px;
+                text-align: left;
+                border: none;
+                background: linear-gradient(to left, $color-yellow, $color-brow);
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    border: none;
+                    width: 20px;
+                    height: 20px;
+                    top: 4px;
+                    left: -10px;
+                    background: $color-brow;
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                }
+
+                .work_info {
+                    color: $color-white-0;
+                }
+
+                .time {
+                    color: $color-white-0;
+                }
+
+                .work_body {
+                    @include text($color-white-0, $fs-1, $fw-bold);
+                    letter-spacing: 2px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    @include Responsive(SM) {
+        ul.work_resume {
+            position: relative;
+            list-style: none;
+            margin-top: 40px;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(to bottom, $color-yellow, $color-brow);
+                margin-left: 0px;
+            }
+        }
+    }
+    @include Responsive(XS) {
+        ul.work_resume {
+            position: relative;
+            list-style: none;
+            margin-top: 40px;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background: linear-gradient(to bottom, $color-yellow, $color-brow);
+                margin-left: 0px;
+            }
+            li:nth-child(odd) {
+                margin-top: 15px;
+                &::before {
+                    left: -5px;
+                }
+                .work_items {
+                    margin-left: 32px;
+                    width: auto;
+                    &::before {
+                        left: -10px;
+                        background: $color-yellow;
+                    }
+
+                }
+            }
+            li:nth-child(even) {
+                margin-top: 15px;
+                &::before {
+                    left: -5px;
+                }
+                .work_items {
+                    margin-left: 32px;
+                    width: auto;
+                    float: left;
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+}

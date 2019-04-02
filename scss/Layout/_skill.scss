@@ -1,0 +1,167 @@
+#skill {
+    background: $color-black-2;
+    padding: 60px 0;
+
+    h1 {
+        @include text($color-white-0, $fs-4, $fw-bold);
+        letter-spacing: 3px;
+    }
+
+    .skill_content {
+        padding: 50px;
+
+        .skill_items {
+            @include text ($color-white-0, $fs-1, $fw-normal);
+
+            span {
+                float: right;
+            }
+
+            .progress {
+                margin-bottom: 25px;
+                height: 10px;
+                background: $color-gray-2;
+
+                .progress_bar_html {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-html 3s ease-in-out forwards;
+                    -webkit-animation: progress-html 3s ease-in-out forwards;
+                }
+
+                .progress_bar_sass {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-sass 3s ease-in-out forwards;
+                    -webkit-animation: progress-sass 3s ease-in-out forwards;
+                }
+
+                .progress_bar_js {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-js 3s ease-in-out forwards;
+                    -webkit-animation: progress-js 3s ease-in-out forwards;
+                }
+
+                .progress_bar_bs {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-bst 3s ease-in-out forwards;
+                    -webkit-animation: progress-bst 3s ease-in-out forwards;
+                }
+
+                .progress_bar_uxi {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-uxi 3s ease-in-out forwards;
+                    -webkit-animation: progress-uxi 3s ease-in-out forwards;
+                }
+
+                .progress_bar_git {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-git 3s ease-in-out forwards;
+                    -webkit-animation: progress-git 3s ease-in-out forwards;
+                }
+                .progress_bar_ang {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-ang 3s ease-in-out forwards;
+                    -webkit-animation: progress-ang 3s ease-in-out forwards;
+}
+                .progress_bar_react {
+                    float: left;
+                    width: 0;
+                    height: 100%;
+                    font-size: 12px;
+                    background-color: $color-yellow;
+                    text-align: center;
+                    animation: progress-react 3s ease-in-out forwards;
+                    -webkit-animation: progress-react 3s ease-in-out forwards;
+}
+            }
+        }
+    }
+}
+
+@keyframes progress-html {
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes progress-sass {
+
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes progress-js {
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes progress-bst {
+
+    to {
+        width: 92%;
+    }
+}
+
+@keyframes progress-uxi {
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes progress-git {
+
+    to {
+        width: 70%;
+    }
+}
+@keyframes progress-ang {
+
+    to {
+        width: 70%;
+    }
+}
+@keyframes progress-react {
+
+    to {
+        width: 50%;
+    }
+}

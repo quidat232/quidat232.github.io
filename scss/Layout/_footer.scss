@@ -1,0 +1,28 @@
+#footer {
+    background: $color-black-0;
+    .footer_title {
+        text-align: center;
+        padding: 20px;
+        @include text($color-white-0,$fs-1,$fw-normal);
+        letter-spacing: 2px;
+        margin: 0;
+    }
+}
+// *movetotop
+.toTop {
+    display: none;
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+   z-index: 999;
+   i {
+    color:  $color-yellow;
+    padding: 9px 12px;
+    font-size: $fs-5;
+   }
+}

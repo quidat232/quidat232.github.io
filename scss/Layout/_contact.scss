@@ -1,0 +1,97 @@
+#contact {
+    padding: 60px 0;
+    background-image: url("../../img/contact-background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 30px;
+
+    .contact_overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+        background: $color-black-1;
+        z-index: 2;
+        opacity: .85;
+    }
+
+    .content_ct {
+        position: relative;
+        z-index: 10;
+
+        h1 {
+            @include text($color-white-0, $fs-4, $fw-bold);
+            letter-spacing: 3px;
+        }
+
+        .contact_form {
+            .form-control {
+                border: none;
+                outline: none;
+                color: $color-black-0;
+                font-size: $fs-1;
+                margin-bottom: 20px;
+            }
+
+            input {
+                height: 45px;
+            }
+
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            .submit {
+                background: $color-yellow;
+                border-color: none;
+                @include text($color-white-0, $fs-2, $fw-bold);
+                letter-spacing: 2px;
+                height: 50px;
+                margin-top: 20px;
+                transition: all .5s;
+                -webkit-transition: all .5s;
+                -moz-transition: all .5s;
+                -ms-transition: all .5s;
+                -o-transition: all .5s;
+
+                &:hover {
+                    background: $color-black-1;
+                }
+            }
+
+
+        }
+        .contact_group {
+            h3 {
+                @include text($color-white-0, $fs-4 - 2, $fw-bold);
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid $color-white-0;
+                padding-bottom: 20px;
+            }
+
+            .contact_address {
+                border-bottom: 1px solid $color-white-0;
+                margin-bottom: 10px;
+
+                p:nth-child(1) {
+                    @include text($color-white-0, $fs-1, $fw-normal);
+
+                    float: left;
+                    width: 20%;
+                }
+
+                p:nth-child(2) {
+                    @include text($color-white-0, $fs-1, $fw-normal);
+                }
+            }
+        }
+    }
+}
